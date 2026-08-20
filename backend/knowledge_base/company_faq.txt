@@ -1,0 +1,18 @@
+Company Support FAQ
+
+Refund Policy:
+Customers can request a refund within 30 days of purchase.
+Refunds are processed within 5-7 business days after approval.
+
+Payment Issues:
+If a payment has been completed but the order still shows as unpaid,
+customers should provide their order ID to customer support.
+The support team will verify the payment transaction.
+
+Shipping:
+Standard shipping takes 3-5 business days.
+Express shipping takes 1-2 business days.
+
+Account Security:
+Customers should never share their password, API keys, or authentication
+tokens with anyone, including customer support representatives.

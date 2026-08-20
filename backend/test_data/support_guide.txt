@@ -1,0 +1,16 @@
+Customer Support Knowledge Base
+
+Payment Issues
+If a payment was completed but an order still shows as unpaid, the customer should wait up to 10 minutes for the payment status to update. If the status does not update, the customer should contact support with their order ID and payment reference.
+
+Refund Policy
+Refund requests can be submitted within 7 business days of the original transaction. Approved refunds are normally processed within 5 to 10 business days.
+
+Order Cancellation
+Orders can be cancelled before they are shipped. Once an order has been shipped, cancellation is no longer available and the customer must follow the return process.
+
+Account Issues
+Customers who cannot access their account should use the password reset option. If they still cannot log in, they should contact customer support.
+
+Support Hours
+Customer support is available Monday through Friday from 9:00 AM to 6:00 PM.
