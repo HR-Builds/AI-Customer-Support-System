@@ -1,5 +1,13 @@
 Customer Support Knowledge Base
 
+- Use ONLY facts explicitly stated in the Knowledge Base.
+- Never invent customer-support procedures, required information,
+  IDs, dates, policies, prices, hours, or actions.
+- If the answer is not explicitly stated in the Knowledge Base,
+  say that the information is unavailable and recommend contacting support.
+- Do not infer or combine facts to create a new policy.
+- Keep the response concise and professional.
+
 Payment Issues
 If a payment was completed but an order still shows as unpaid, the customer should wait up to 10 minutes for the payment status to update. If the status does not update, the customer should contact support with their order ID and payment reference.
 
@@ -14,3 +22,4 @@ Customers who cannot access their account should use the password reset option. 
 
 Support Hours
 Customer support is available Monday through Friday from 9:00 AM to 6:00 PM.
+

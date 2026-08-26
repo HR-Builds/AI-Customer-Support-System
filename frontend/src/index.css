@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surfaces — obsidian, warm undertone, never pure black */
+  --color-ink: #0b0a08;
+  --color-surface: #141210;
+  --color-surface-2: #1c1815;
+  --color-surface-3: #24201b;
+  --color-line: #362f24;
+  --color-line-soft: #211d17;
+
+  /* Text — warm ivory, not white */
+  --color-paper: #f3ead9;
+  --color-paper-dim: #cabfa8;
+  --color-muted: #948a79;
+  --color-faint: #5d5548;
+
+  /* Nova accent — champagne gold, used sparingly */
+  --color-nova: #c9a15a;
+  --color-nova-dim: #96793c;
+  --color-nova-soft: #241d0f;
+
+  /* Status */
+  --color-good: #85a878;
+  --color-warn: #cf9a4a;
+  --color-bad: #ae5b4c;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-nova);
+  color: var(--color-ink);
+}
+
+/* Thin scrollbars for the console feel */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 999px;
+}
+
+@keyframes blink-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.live-dot {
+  animation: blink-dot 2s ease-in-out infinite;
+}
+
+/* Signature ambient glow — a single slow breathing light behind the
+   hero console, standing in for the idea of a request being quietly
+   attended to. The one animated flourish on the page; everything
+   else stays still. */
+@keyframes ambient-breathe {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.06); }
+}
+.ambient-glow {
+  animation: ambient-breathe 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Visible keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--color-nova);
+  outline-offset: 2px;
+}
