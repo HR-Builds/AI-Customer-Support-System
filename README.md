@@ -1,6 +1,7 @@
 # 🤖 Nova — AI Customer Support System
 
 An AI-powered Customer Support Platform built with **FastAPI**, **React**, **PostgreSQL**, and **Groq LLM**. Nova combines a RAG-based AI concierge with a full human-support ticketing system and an admin console — giving customers instant AI answers while keeping a human safety net for anything that needs one.
+live Url : novaai-hassan-8c87.vercel.app
 
 The project demonstrates practical implementation of **RAG (Retrieval-Augmented Generation)**, **JWT authentication**, **role-based access control**, and a **production-ready full-stack deployment**.
 
