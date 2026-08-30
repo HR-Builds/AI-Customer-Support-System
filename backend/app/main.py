@@ -85,3 +85,19 @@ def database_health_check():
         "success": True,
         "message": "Database connection is working",
     }
+
+@app.on_event("startup")
+def ingest_knowledge_base_if_empty():
+    from pathlib import Path
+    from app.rag.retriever import _get_vectorstore
+    from app.rag.ingest import ingest_document
+
+    try:
+        vectorstore = _get_vectorstore()
+        existing = vectorstore.get()
+        if not existing["ids"]:
+            guide_path = Path(__file__).resolve().parent.parent / "test_data" / "support_guide.txt"
+            if guide_path.exists():
+                ingest_document(str(guide_path))
+    except Exception as e:
+        print(f"Knowledge base auto-ingest skipped: {e}")
