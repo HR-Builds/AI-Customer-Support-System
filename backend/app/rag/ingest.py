@@ -4,13 +4,24 @@ from langchain_community.document_loaders import (
     PyPDFLoader,
     TextLoader,
 )
-from langchain_huggingface import HuggingFaceEmbeddings
+from chromadb.utils.embedding_functions import DefaultEmbeddingFunction
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 CHROMA_DIR = BASE_DIR / "chroma_db"
+
+
+class LightweightEmbeddings:
+    def __init__(self):
+        self._fn = DefaultEmbeddingFunction()
+
+    def embed_documents(self, texts):
+        return self._fn(texts)
+
+    def embed_query(self, text):
+        return self._fn([text])[0]
 
 
 def load_document(file_path: str):
@@ -42,9 +53,7 @@ def ingest_document(file_path: str) -> int:
 
     chunks = splitter.split_documents(documents)
 
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
-    )
+    embeddings = LightweightEmbeddings()
 
     vectorstore = Chroma(
         collection_name="customer_support_knowledge",
